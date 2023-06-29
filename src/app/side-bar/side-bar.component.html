@@ -1,0 +1,23 @@
+<div class="options-container">
+  <mat-card-content>
+    <mat-list>
+      <img src="https://eva.yavirac.edu.ec/pluginfile.php/1/theme_lambda/logo/1677711032/nuevos%20logo%20YAVIRAC-01.png" alt="Logo" class="logo-image" height="150px">
+      <mat-list-item [ngClass]="{ active: parametroSideMenu === 'Home' }">
+      <a href="/home"> <mat-icon>home</mat-icon>
+        Inicio</a>
+      </mat-list-item>
+      <mat-list-item *ngIf="data.type === 'student'" [ngClass]="{ active: parametroSideMenu === 'Upload' }">
+          <a href="/upload"> <mat-icon>assignment</mat-icon>
+    Subir Tarea</a>
+      </mat-list-item>
+      <mat-list-item *ngIf="data.type === 'teacher'" [ngClass]="{ active: parametroSideMenu === 'AddUser' }">
+        <a href="/addUser"><mat-icon>person_add</mat-icon>
+        Añadir estudiante</a>
+      </mat-list-item>
+      <mat-list-item>
+      <a href="/login">  <mat-icon>exit_to_app</mat-icon>
+       Salir</a>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</div>
